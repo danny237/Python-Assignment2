@@ -8,6 +8,7 @@ person1 = {
 
 with open('about_me.json', 'w') as f:
     json.dump(person1, f)
+    f.close()
 
 detail = open('about_me.json', 'r').read()
 print(detail)
@@ -17,6 +18,6 @@ print('\n')
 
 with open('about_me.json', 'r') as f:
     person = json.load(f)
-
+    f.close()
 print(person)
 print(type(person))
